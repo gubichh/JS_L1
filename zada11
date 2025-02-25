@@ -1,0 +1,7 @@
+function bingo(ticket, win) {
+  let miniWins = ticket.filter(([str, num]) => {
+    return [...str].some(char => char.charCodeAt(0) === num);
+  }).length;
+
+  return miniWins >= win ? 'Winner!' : 'Loser!';
+}
