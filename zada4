@@ -1,0 +1,6 @@
+function findMissing(list) {  
+    let n = list.length + 1;
+    let totalSum = (n * (list[0] + list[list.length - 1])) / 2;
+    let currentSum = list.reduce((sum, num) => sum + num, 0);
+    return totalSum - currentSum;
+}
